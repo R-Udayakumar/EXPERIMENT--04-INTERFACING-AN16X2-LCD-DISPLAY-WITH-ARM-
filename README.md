@@ -51,24 +51,15 @@ Hex Code Command to LCD Instruction Register
   - C2  Jump to second line, position 2
  
 ### Procedure:
- 1. click on STM 32 CUBE IDE, the following screen will appear 
- 2. click on FILE, click on new stm 32 project 
-3. select the target to be programmed  as shown below and click on next 
-4.select the program name.<br>  
-5. corresponding ioc file will be generated automatically 
-6.select the appropriate pins as gipo, in or out, USART or required options and configure 
-7.click on cntrl+S , automaticall C program will be generated 
-8. edit the program and as per required   
-9. Add necessary library files of LCD 16x2 , write the program and use project and build  
-10. once the project is bulild 
-11. click on debug option 
-12.  Creating Proteus project and running the simulation
-We are now at the last part of step by step guide on how to simulate STM32 project in Proteus.
-13. Create a new Proteus project and place STM32F40xx i.e. the same MCU for which the project was created in STM32Cube IDE. 
-14. After creation of the circuit as per requirement as shown below <br>
-14. Double click on the the MCU part to open settings. Next to the Program File option, give full path to the Hex file generated using STM32Cube IDE. Then set the external crystal frequency to 8M (i.e. 8 MHz). Click OK to save the changes.
-https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
-15. click on debug and simulate using simulation as shown below 
+1. Open a new STM32 Project.
+2. Selecting GPIO Ports
+   PA0 ,PA1 ,PA2 ,PA3 ,PB0 ,PB1 -> GPIO Output
+3. generating the code.
+4. Build Debug and Create 'hex file'.
+5. Open a new Proteus Project.
+6. Select Ports STM32F401RB and LCD 16*2
+7. Connect PA0 to D7 , PA1 to D6 , PA2 to D5 , PA3 to D5 , RS to PB0 and E to PB1.
+8. Check the execution of the output using Run option. 
 ### STM 32 CUBE PROGRAM :
 ```C
 #include "main.h"
